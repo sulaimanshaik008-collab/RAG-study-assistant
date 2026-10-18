@@ -130,10 +130,13 @@ rag-study-assistant/
 ├── README.md
 ├── requirements.txt
 ├── .gitignore
+├── pytest.ini
 ├── src/
-│   └── pdf_extractor.py
+│   ├── chunking.py
+│   └── pdf_loader.py
 ├── tests/
-│   └── test_pdf_extractor.py
+│   ├── test_chunking.py
+│   └── test_pdf_loader.py
 ├── data/
 │   └── .gitkeep
 └── docs/
@@ -150,8 +153,8 @@ The project follows a phased engineering roadmap to verify each component indepe
 
 | Phase | Focus Area | Key Deliverables | Status |
 | :---: | :--- | :--- | :---: |
-| **Phase 1** | Foundation & PDF Extraction | Project setup, PyMuPDF extraction module, input validation, and unit tests. | **In Progress** |
-| **Phase 2** | Chunking & Embeddings | Recursive text chunking, metadata attachment, and Sentence Transformer integration. | Planned |
+| **Phase 1** | Foundation & PDF Extraction | Project setup, PyMuPDF extraction module, input validation, and unit tests. | Completed |
+| **Phase 2** | Chunking & Embeddings | Recursive text chunking, metadata attachment, and Sentence Transformer integration. | In Progress |
 | **Phase 3** | Vector Storage | ChromaDB collection initialization, local persistence, and indexing operations. | Planned |
 | **Phase 4** | Semantic Retrieval | Similarity search, distance threshold tuning, and retrieval relevance evaluation. | Planned |
 | **Phase 5** | Model Integration & Grounding | Hugging Face LLM prompt assembly, grounded answer generation, and citation formatting. | Planned |
