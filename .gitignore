@@ -2,6 +2,11 @@
 __pycache__/
 .pytest_cache/
 .env
+chroma_db/
+
+# Prevent tracking or exposure of any PDF books or academic documents
+*.pdf
 data/*
 !data/.gitkeep
-chroma_db/
+data/*.pdf
+data/**/*.pdf
