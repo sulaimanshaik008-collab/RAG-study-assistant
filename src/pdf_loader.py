@@ -1,6 +1,7 @@
+
 from pathlib import Path
 
-import fitz
+import pymupdf
 
 
 def extract_pdf_text(pdf_path: str | Path) -> list[dict]:
@@ -15,7 +16,7 @@ def extract_pdf_text(pdf_path: str | Path) -> list[dict]:
 
     pages = []
 
-    with fitz.open(path) as document:
+    with pymupdf.open(path) as document:
         if document.is_encrypted:
             raise ValueError("The PDF is encrypted.")
 
